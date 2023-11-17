@@ -1,0 +1,6 @@
+langchain 
+bs4 
+PyPDFium2 
+gradio 
+sentence-transformers 
+redis

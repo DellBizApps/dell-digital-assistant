@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: redis-ingest
+  labels:
+    app: redis-ingest
+spec:
+  to:
+    kind: Service
+    name: redis-ingest
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+  wildcardPolicy: None

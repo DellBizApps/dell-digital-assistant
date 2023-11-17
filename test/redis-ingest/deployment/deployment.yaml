@@ -1,0 +1,48 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: redis-ingest
+  labels:
+    app: redis-ingest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-ingest
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: redis-ingest
+    spec:
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      affinity: {}
+      terminationGracePeriodSeconds: 120
+      securityContext: {}
+      containers:
+        - resources:
+            limits:
+              cpu: '4'
+              memory: 16Gi
+            requests:
+              cpu: '4'
+              memory: 16Gi
+          terminationMessagePath: /dev/termination-log
+          name: server
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            seccompProfile:
+              type: RuntimeDefault
+          ports:
+            - name: http
+              containerPort: 7860
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+          image: 'quay.io/dellbizapps/ai/dell-redis-ingest-ui:v0.0.1'
+      dnsPolicy: ClusterFirst
+

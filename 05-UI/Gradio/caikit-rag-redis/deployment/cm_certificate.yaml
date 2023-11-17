@@ -1,0 +1,17 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: caikit-certificate
+data:
+  certificate.pem: |
+    -----BEGIN CERTIFICATE-----
+    MIIDTTCCAjWgAwIBAgIUQmzTWuaLhFQDuY+c8muUH7rRsJAwDQYJKoZIhvcNAQEL
+    BQAwKjEVMBMGA1UECgwMRXhhbXBsZSBJbmMuMREwDwYDVQQDDAhkZWxsLmNvbTAe
+    Fw0yMzEwMjMxNDAxNTBaFw0zMzA3MjIxNDAxNTBaMCoxETAPBgNVBAMMCGRlbGwu
+    ****************************************************************
+    ****************************************************************
+    ****************************************************************
+    z3DPXsX2dCAfs54N/Fs656P52OQIMOTu0FNwfZAuFt/YXT4f0K6lk1cOMO+A7l8v
+    eCWxQTqETs8duCTPnJRetO9AG5drev9d5yx+Fc8a6Yl9Z4NW2wl5gQvtIdmfMQjA
+    chuIuHD9AByDR8Qj1XvC6eV5N5dLcJgYwxLRHRuheMwb
+    -----END CERTIFICATE-----
