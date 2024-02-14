@@ -3,7 +3,8 @@
 
 > [!NOTE] The steps and configuration options present in this GitHub repository is for example purpose only. Dell Technologies will not provide support for the code provided here. 
 
-This guide describes the process of deploying a digital assistant using Red Hat OpenShift AI on Dell APEX Cloud Platform for Red Hat OpenShift. This solution is designed to create a cloud native AI application, with the ease of deployment and manageability. 
+This [deployment guide](https://infohub.delltechnologies.com/t/design-guide-implementing-a-digital-assistant-with-red-hat-openshift-ai-on-dell-apex-cloud-platform-1/) describes the process of deploying a digital assistant using Red Hat OpenShift AI on Dell APEX Cloud Platform for Red Hat OpenShift. This solution is designed to create a cloud native AI application, with the ease of deployment and manageability. 
+
 
 LLMs are highly sophisticated AI models designed to understand and generate human-like text, enabling a wide range of natural language processing applications. One limitation of LLMs is that once they are generated, LLMs do not have access to information beyond the date that they were trained. Retrieval Augmented Generation (RAG) can extend the functionality of the LLMs by retrieving facts from an external knowledge base, in this case, from a Redis in-memory Vector database. 
 
